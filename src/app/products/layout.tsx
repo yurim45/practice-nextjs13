@@ -12,7 +12,7 @@ const ProductsLayout = ({ children }: { children: ReactNode }) => {
           <li>강아지옷</li>
         </ul>
       </nav>
-      {children}
+      <section>{children}</section>
     </>
   );
 };
