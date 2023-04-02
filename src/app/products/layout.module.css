@@ -1,4 +1,4 @@
-.list {
+.nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -7,6 +7,6 @@
   border: 1px solid #f7cdfa;
 }
 
-.list li {
+.nav a {
   padding: 8px;
 }
