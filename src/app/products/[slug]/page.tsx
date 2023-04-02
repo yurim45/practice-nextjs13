@@ -25,7 +25,7 @@ export default DtailPage;
 // next가 정해준 generateStaticParams 이름의 함수로 처리할 수 있다
 export const generateStaticParams = () => {
   // 미리 만들어 두고 싶은 페이지의 slug를 지정
-  const products = ['pants', 'skirt'];
+  const products = ['shirt', 'pants', 'skirt', 'shoes'];
 
   return products.map((product) => ({
     slug: product,
