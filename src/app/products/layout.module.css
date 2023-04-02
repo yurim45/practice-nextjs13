@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 8px;
+  border: 1px solid #f7cdfa;
+}
+
+.list li {
+  padding: 8px;
+}

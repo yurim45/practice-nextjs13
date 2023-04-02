@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+
 import './globals.css';
 import styles from './layout.module.css';
 
