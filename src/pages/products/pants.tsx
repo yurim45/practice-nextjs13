@@ -3,7 +3,7 @@ import React from 'react';
 const PantsPage = () => {
   return (
     <>
-      <div>Pants!</div>
+      <h1>Pants!</h1>
     </>
   );
 };
