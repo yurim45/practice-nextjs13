@@ -10,7 +10,7 @@ const ProductsLayout = ({ children }: { children: ReactNode }) => {
         <a href=''>남성옷</a>
         <a href=''>여성옷</a>
       </nav>
-      <section>{children}</section>
+      <section className={styles.product}>{children}</section>
     </>
   );
 };

@@ -2,11 +2,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 30px;
-  padding: 8px;
+  padding: 16px;
   border: 1px solid #f7cdfa;
 }
 
 .nav a {
-  padding: 8px;
+  padding: 0 8px;
+}
+
+.product {
+  padding: 16px;
 }
