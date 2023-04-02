@@ -1,10 +1,8 @@
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from './page.module.css';
-
-const inter = Inter({ subsets: ['latin'] });
+import React from 'react';
+import { notFound } from 'next/navigation';
 
 export default function Home() {
+  notFound();
   return (
     <>
       <h1>홈페이지!</h1>
