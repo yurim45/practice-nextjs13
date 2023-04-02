@@ -7,6 +7,13 @@ type Props = {
   };
 };
 
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: `제품의 이름: ${params.slug}`,
+    description: `${params.slug}을 소개합니다`,
+  };
+};
+
 const DtailPage = ({ params }: Props) => {
   if (params.slug === 'nothing') {
     notFound();
