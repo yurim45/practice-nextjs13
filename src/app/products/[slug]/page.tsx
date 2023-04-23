@@ -2,6 +2,8 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { getProduct, getProducts } from '@/service/products';
 
+export const revalidate = 3;
+
 type Props = {
   params: {
     slug: string;
