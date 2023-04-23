@@ -15,27 +15,24 @@ export const generateMetadata = ({ params: { slug } }: Props) => {
   };
 };
 
-const DtailPage = ({ params: { slug } }: Props) => {
-  // slug가 아니라, 서버 파일에 있는 데이터중 해당 제품의 정보를 찾아서 그걸 보여줌
-  const product = getProduct(slug);
+export default async function DtailPage({ params: { slug } }: Props) {
+  const product = await getProduct(slug);
 
   if (!product) {
     notFound();
   }
   return (
     <>
-      <h1>{product} 제품 상세 페이지</h1>
+      <h1>{product.name} 제품 상세 페이지</h1>
     </>
   );
-};
+}
 
-export default DtailPage;
-
-export const generateStaticParams = () => {
+export async function generateStaticParams() {
   // 모든 제품의 페이지들을 미리 만들어 둘 수 있게 해줄거임(SSG)
-  const products = getProducts();
+  const products = await getProducts();
 
   return products.map((product) => ({
-    slug: product,
+    slug: product.id,
   }));
-};
+}
