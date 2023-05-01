@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getProduct, getProducts } from '@/service/products';
+import Image from 'next/image';
 
 export const revalidate = 3;
 
@@ -26,6 +27,12 @@ export default async function DtailPage({ params: { slug } }: Props) {
   return (
     <>
       <h1>{product.name} 제품 상세 페이지</h1>
+      <Image
+        alt={product.name}
+        src={`/images${product.image}`}
+        width={300}
+        height={300}
+      />
     </>
   );
 }
