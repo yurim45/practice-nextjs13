@@ -31,5 +31,6 @@ export async function getServerSideProps() {
 
   return {
     props: { products },
+    revalidate: 10, // // next12에서의 ISR
   };
 }
