@@ -1,12 +1,8 @@
 import React from 'react';
 import os from 'os'; // 노드 APIs
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
 
 import Counter from '@/components/Counter';
-
-// 폰트 적용
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   console.log('안녕! - 서버'); // 서버 컴포넌트로 동작하므로 브라우저가 아닌 터미널에서 확인 가능
@@ -14,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <h1 className={inter.className}>홈페이지!</h1>
+      <h1>홈페이지!</h1>
       <Counter />
       {/* 외부 이미지를 사용하려면 next.config에 등록하고 width, height를 지정해야 함 */}
       <Image
