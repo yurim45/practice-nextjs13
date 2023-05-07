@@ -1,3 +1,5 @@
+const { redirect } = require('next/dist/server/api-utils');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -10,6 +12,20 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
+  },
+  async redirect() {
+    return [
+      {
+        source: 'products/deleted_forever', // 이 경로로 왔을 때
+        destination: '/products', // 여기로 이동시킬꺼야!
+        permanet: true, // 영원히! 앞으로도 쭈욱~!!
+      },
+      {
+        source: 'products/deleted_temp', // 이 경로로 왔을 때
+        destination: '/products', // 여기로 이동시킬꺼야!
+        permanet: false, // 일시적으로 리다이렉트 시켜주면 돼~!
+      },
+    ];
   },
 };
 
