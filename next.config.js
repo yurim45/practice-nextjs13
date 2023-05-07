@@ -31,7 +31,7 @@ const nextConfig = {
     return [
       {
         source: 'april', // 아래 경로를 이 경로로 적용할꺼야~!
-        destination: '/about/me/april',
+        destination: '/about/me/april', // 이 경로는 너무 복잡하니까, 또는 보안상 가려졌으면 좋겠으니까
       },
       {
         source: '/items/:slug',
