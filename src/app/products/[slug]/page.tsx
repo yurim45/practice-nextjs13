@@ -1,5 +1,5 @@
 import React from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getProduct, getProducts } from '@/service/products';
 import Image from 'next/image';
 
@@ -22,7 +22,8 @@ export default async function DtailPage({ params: { slug } }: Props) {
   const product = await getProduct(slug);
 
   if (!product) {
-    notFound();
+    redirect('/products'); // product 이 없다면 이 경로로 이동
+    // notFound();
   }
   return (
     <>
