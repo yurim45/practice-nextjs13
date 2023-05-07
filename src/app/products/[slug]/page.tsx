@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound, redirect } from 'next/navigation';
 import { getProduct, getProducts } from '@/service/products';
 import Image from 'next/image';
+import GoProductsButton from '@/components/GoProductsButton';
 
 export const revalidate = 3;
 
@@ -34,6 +35,8 @@ export default async function DtailPage({ params: { slug } }: Props) {
         width={300}
         height={300}
       />
+      {/* SSR이므로 버튼 작동이 안된다. 그러므로 clinet component로 만들어야 함 */}
+      <GoProductsButton />
     </>
   );
 }
