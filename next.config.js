@@ -27,6 +27,18 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: 'april', // 아래 경로를 이 경로로 적용할꺼야~!
+        destination: '/about/me/april',
+      },
+      {
+        source: '/items/:slug',
+        destination: '/products/:slug',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
