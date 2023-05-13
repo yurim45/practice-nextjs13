@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.ico' },
 };
 
-// 폰트 적용
+// 폰트 적용!
 const nanumGothic = Nanum_Gothic({ weight: '700', subsets: ['latin'] });
 const roboto = Roboto({ weight: '700', subsets: ['latin'] });
 
